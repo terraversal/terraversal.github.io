@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "MSW98UI";
+  src: url("/fonts/MSW98UI-Regular.ttf") format("truetype"),
+    url("fonts/MSW98UI-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "MSW98UI", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url("frutigeraero.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  margin-top: 4rem;
+  --bg-color: rgb(20, 122, 255);
+  background-color: var(--bg-color);
+  padding: 1rem 2rem;
+  border-radius: 1.25px;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s linear, box-shadow 0.15s linear;
+}
+.card:hover {
+  outline: rgb(255, 255, 255) 2px dotted;
+  transform: translateY(-3px);
+}
+
+.loader {
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+.header--two {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 40px;
+  color: #000000;
+}
+
+.words {
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.word {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: block;
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  line-height: 40px;
+  padding-left: 6px;
+  color: #ffffff;
+  animation: spin_4991 6s infinite;
+}
+
+@keyframes spin_4991 {
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+
+.paragraph--description {
+  background: white;
+  border: transparent solid;
+  border-radius: 1.25px;
+  box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 40rem;
+  transition: transform 0.15s linear, box-shadow 0.15s linear;
+}
+
+.paragraph--description:hover {
+  outline: rgb(255, 255, 255) 2px dotted;
+  transform: translateY(-3px);
+}
+
+.div--windows--top {
+  width: 100%;
+  background-color: rgb(20, 122, 255);
+}
+
+.dialog--info {
+  background-color: rgb(255, 255, 255);
+  border: rgb(20, 122, 255) 5px solid;
+  border-radius: 1.25px;
+  transition: transform 0.15s linear, box-shadow 0.15s linear;
+  padding: 0;
+  width: 500px;
+}
+
+.dialog--info:hover {
+  transform: translateY(-3px);
+}
+
+#close-btn {
+  background-color: transparent;
+  border: rgb(20, 122, 255) 5px solid;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 20%;
+}
+
+#close-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: crisp-edges;
+  user-select: none;
+}
+
+#close-btn:hover {
+  cursor: pointer;
+}
+
+#close-btn:focus-visible {
+  outline: none;
+}
+
+.button--info {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  overflow: hidden;
+  bottom: 50px;
+  right: 50px;
+  background-color: transparent;
+  border: transparent 3px solid;
+  border-radius: 20%;
+  box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s linear, box-shadow 0.15s linear;
+}
+
+.button--info img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button--info:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  outline: rgb(255, 255, 255) 2px dotted;
+}
+
+.div--card {
+  background: linear-gradient(135deg, #ffffa5 0%, #ffff8d 100%);
+  padding: 10px;
+  box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, 0.3);
+
+  transform: rotate(0deg);
+
+  transition: transform 0.15s linear, box-shadow 0.15s linear;
+
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 20px;
+}
+.div--card:hover {
+  outline: rgb(255, 255, 255) 2px dotted;
+  transform: translateY(-3px);
+}
+.article--card {
+  background: linear-gradient(135deg, #ffffa5 0%, #ffff8d 100%);
+  padding: 10px;
+  box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, 0.3);
+
+  transform: rotate(0deg);
+
+  transition: transform 0.15s linear, box-shadow 0.15s linear;
+
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 20px;
+}
+.article--card:hover {
+  outline: rgb(255, 255, 255) 2px dotted;
+  transform: translateY(-3px);
+}
+
+@keyframes blurIn {
+  from {
+    backdrop-filter: blur(0px);
+  }
+  to {
+    backdrop-filter: blur(10px);
+  }
+}
+
+.dialog--info:hover {
+  cursor: pointer;
+}
+
+.dialog--info::backdrop {
+  background-color: rgba(255, 255, 255, 0.3);
+  animation-name: blurIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#email:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.paragraph--bold {
+  font-weight: bold;
+}
+
+.paragraph--window {
+  background: white;
+  border-radius: 1.25px;
+  text-align: center;
+  max-width: 40rem;
+  transition: transform 0.15s linear, box-shadow 0.15s linear;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #00d9ff #3d67ff;
+}
+
+@supports selector(::-webkit-scrollbar) {
+  .element::-webkit-scrollbar {
+    width: 10px;
+  }
+  .element::-webkit-scrollbar-thumb {
+    background: #30005d;
+  }
+}
+
+#static-checkbox {
+  width: 5rem;
+  height: 5rem;
+}
